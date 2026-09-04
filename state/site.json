@@ -1,9 +1,13 @@
 {
-  "obnovleno": null,
-  "wp": null,
-  "mu_plugins": null,
-  "stranic": null,
-  "zapisey": null,
-  "posledniy_bekap": null,
-  "vneshnyaya_proverka": null
+  "obnovleno": "2026-09-04T21:10+03:00",
+  "wp": "7.1",
+  "mu_plugins": 15,
+  "stranic": 204,
+  "zapisey": 22,
+  "posledniy_bekap": "2026-09-04 21:06 — /srv/regiongbi/backups/2026-09-04/db-20260904-2106.sql.zst (5.8 МБ до сжатия) + files-20260904-2106.tar.gz, 67 файлов",
+  "vneshnyaya_proverka": "2026-09-04 21:07 — 2 проблемы, monitor.sh вышел с кодом 1",
+  "problemy": [
+    "/license.txt отдаёт 200, 19903 байта (nginx отдаёт статику мимо .htaccess)",
+    "/catalog/koltsa-kolodeznye-ks/ks-10-9/ — в разметке Product нет offers/price"
+  ]
 }
