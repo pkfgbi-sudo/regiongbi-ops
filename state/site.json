@@ -1,5 +1,5 @@
 {
-  "obnovleno": "2026-09-04T22:35+03:00",
+  "obnovleno": "2026-09-04T23:00+03:00",
   "wp": "7.1",
   "mu_plugins": 15,
   "stranic": 204,
@@ -11,11 +11,19 @@
     "8 страниц type=list: mu-rz-product-schema.php не печатает главный товар страницы и жёстко ставит price=null у позиций ряда — нет offers и нет собственной марки (ks-10-9, ks-15-9, fbs-24-4-6, vp-18, op-1d, op-1k, skoby-hodovye, promyshlennye-lestnicy)",
     "4 карточки без цены в мете, offers ставить нечем: vl-2, kl, lp-8-1, kksr-3 — нужна цена от владельца",
     "mu-rz-product-schema.php печатает свой JSON-LD на wp_head вместо фильтра rank_math/json_ld (против правила 3.4 AGENTS.md)",
-    "блок «Смотрите также»: 37 заглушек на 18 страницах, wpautop рвёт карточку из-за <div> внутри <a>"
+    "блок «Смотрите также»: 37 заглушек на 18 страницах, wpautop рвёт карточку из-за <div> внутри <a>",
+    "/srv/regiongbi/crontab.zhbi отстал от живого crontab: в файле 3 строки, в crontab -l 4 — нет строки автозапуска agent-run.sh (замечено в задании 007)"
   ],
   "blok_smotrite_takzhe": "19 страниц (ID 101–119), 76 карточек, 39 с фото, 37 заглушек #eef2f0 на 18 страницах; ломает wpautop из-за <div> внутри <a>; сырьё в packages/related-src/ (задание 002)",
   "adresov_v_karte": 226,
   "tovarnaya_razmetka": "обход 04.09.2026 22:23–22:26: 226 адресов, все 200; Product на 145 страницах (172 блока), offers у 133; без offers 12 страниц; ItemList на 8; мета _rz_product у 145, числа сходятся (задание 003)",
   "avtozapusk": "cron */10 → /srv/regiongbi/bin/agent-run.sh (750 zhbi), claude найден в окружении cron как /usr/bin/claude; crontab 4 строки; проверены обе ветки скрипта (задание 004)",
-  "zadaniya": "inbox пуст; в done/ 001–004; отчёты 001–004 в outbox/"
+  "zadaniya": "в done/ 001–007, отчёты 001–007 в outbox/; задание 008 пришло с origin в 23:00, уже после начала этого прогона — остаётся в inbox, его возьмёт следующий запуск по cron",
+  "kommercheskie_stranicy": "выгрузка 04.09.2026 22:41–22:43: 6 страниц из 6 найдены по слагам (200 resheniya, 629 zastroyshchiku, 628 zhkh-i-vodokanalu, 627 dorozhnomu-podryadchiku, 626 dorozhnoe-zhbi, 100 catalog); слов 381/792/878/850/918/615; входящих ссылок из контента 0/1/1/2/6/1; сырьё, meta.csv и vhodyashchie-ssylki.csv в packages/resheniya-src/ (задание 005)",
+  "meta_i_og": "обход 04.09.2026 22:45–22:51: 230 адресов (226 из карты + 4 пагинации), все 200, минимальное тело 84370 байт, неудавшихся замеров 0; og:image пуст у 0, пар с совпадающим title 0, пар с совпадающим description 0, ровно один H1 на всех; og-default.png на 187 адресах, собственные фото на 43; таблица packages/meta-audit.csv (задание 006)",
+  "zakryto_kak_lozhnoe": [
+    "«og:image нет на 67 страницах из 88» — замер ложный: og:image есть на всех 230 адресах (задание 006)",
+    "«/blog/page/2-3/ и /page/2-3/ дублируют title и description» — дублей нет, фильтры в mu-rz-og.php работают (задание 006)"
+  ],
+  "uvedomleniya": "bin/notify.sh (копия в /srv/regiongbi/bin/, права 750): письмо через wp_mail() сайта, тема и тело едут по stdin в base64; тест 04.09.2026 22:58 — wp_mail вернул true. Встроено в bin/agent-run.sh: письмо на каждый новый отчёт в outbox/, письмо на упавший прогон с последними строками лога и письмо на защиту «застряло»; строки лога фильтруются от паролей и токенов. Все три ветки прогнаны на тестовом репозитории /srv/regiongbi/tmp/t007. agent-run.sh подменён через mv, т.к. выполнялся в момент правки (задание 007)"
 }
