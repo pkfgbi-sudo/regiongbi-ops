@@ -1,5 +1,5 @@
 {
-  "obnovleno": "2026-09-04T21:10+03:00",
+  "obnovleno": "2026-09-04T22:35+03:00",
   "wp": "7.1",
   "mu_plugins": 15,
   "stranic": 204,
@@ -8,6 +8,14 @@
   "vneshnyaya_proverka": "2026-09-04 21:07 — 2 проблемы, monitor.sh вышел с кодом 1",
   "problemy": [
     "/license.txt отдаёт 200, 19903 байта (nginx отдаёт статику мимо .htaccess)",
-    "/catalog/koltsa-kolodeznye-ks/ks-10-9/ — в разметке Product нет offers/price"
-  ]
+    "8 страниц type=list: mu-rz-product-schema.php не печатает главный товар страницы и жёстко ставит price=null у позиций ряда — нет offers и нет собственной марки (ks-10-9, ks-15-9, fbs-24-4-6, vp-18, op-1d, op-1k, skoby-hodovye, promyshlennye-lestnicy)",
+    "4 карточки без цены в мете, offers ставить нечем: vl-2, kl, lp-8-1, kksr-3 — нужна цена от владельца",
+    "mu-rz-product-schema.php печатает свой JSON-LD на wp_head вместо фильтра rank_math/json_ld (против правила 3.4 AGENTS.md)",
+    "блок «Смотрите также»: 37 заглушек на 18 страницах, wpautop рвёт карточку из-за <div> внутри <a>"
+  ],
+  "blok_smotrite_takzhe": "19 страниц (ID 101–119), 76 карточек, 39 с фото, 37 заглушек #eef2f0 на 18 страницах; ломает wpautop из-за <div> внутри <a>; сырьё в packages/related-src/ (задание 002)",
+  "adresov_v_karte": 226,
+  "tovarnaya_razmetka": "обход 04.09.2026 22:23–22:26: 226 адресов, все 200; Product на 145 страницах (172 блока), offers у 133; без offers 12 страниц; ItemList на 8; мета _rz_product у 145, числа сходятся (задание 003)",
+  "avtozapusk": "cron */10 → /srv/regiongbi/bin/agent-run.sh (750 zhbi), claude найден в окружении cron как /usr/bin/claude; crontab 4 строки; проверены обе ветки скрипта (задание 004)",
+  "zadaniya": "inbox пуст; в done/ 001–004; отчёты 001–004 в outbox/"
 }
