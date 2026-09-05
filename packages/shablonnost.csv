@@ -1,0 +1,205 @@
+slug;ID;razdel;slov_vsego;slov_bez_tablic;predlozheniy;dolya_povtorov_proc
+blok-protivofiltratsionnogo-ekrana;112;blok-protivofiltratsionnogo-ekrana (страница раздела);310;282;24;37.5
+catalog;100;catalog (корень раздела);636;259;12;33.3
+pd-15;654;dnishcha-kolodtsev-pd;1086;944;59;6.8
+pn-10;792;dnishcha-kolodtsev-pd;295;242;20;100.0
+pn-12;793;dnishcha-kolodtsev-pd;290;236;20;100.0
+pn-15;794;dnishcha-kolodtsev-pd;297;243;20;100.0
+pn-20;795;dnishcha-kolodtsev-pd;289;241;20;100.0
+pn-25;796;dnishcha-kolodtsev-pd;283;241;20;100.0
+pn-7;790;dnishcha-kolodtsev-pd;285;244;20;100.0
+pn-8;791;dnishcha-kolodtsev-pd;285;238;20;100.0
+dnishcha-kolodtsev-pd;106;dnishcha-kolodtsev-pd (страница раздела);433;370;26;34.6
+dobornye-elementy-kanalov;860;dobornye-elementy-kanalov (страница раздела);819;249;14;50.0
+dorozhnoe-zhbi;626;dorozhnoe-zhbi (страница раздела);932;853;57;0.0
+bryansk;625;dostavka;682;554;38;50.0
+kaluga;583;dostavka;624;486;31;32.3
+kursk;642;dostavka;707;567;36;47.2
+lipetsk;643;dostavka;765;620;40;50.0
+oryol;644;dostavka;736;588;38;47.4
+ryazan;584;dostavka;662;531;36;13.9
+smolensk;623;dostavka;637;511;34;58.8
+tambov;645;dostavka;728;586;38;44.7
+tula;585;dostavka;631;501;31;35.5
+tver;586;dostavka;594;462;34;35.3
+vladimir;587;dostavka;648;522;36;25.0
+voronezh;641;dostavka;719;576;39;53.8
+yaroslavl;624;dostavka;648;518;37;24.3
+elementy-kollektorov;101;elementy-kollektorov (страница раздела);686;353;24;25.0
+fbs-12-3-6;776;fbs-bloki;308;252;18;100.0
+fbs-12-4-3;786;fbs-bloki;326;254;18;100.0
+fbs-12-4-6;777;fbs-bloki;316;252;18;100.0
+fbs-12-5-6;778;fbs-bloki;313;249;18;100.0
+fbs-12-6-6;779;fbs-bloki;308;252;18;100.0
+fbs-24-3-6;772;fbs-bloki;309;253;18;100.0
+fbs-24-4-6;640;fbs-bloki;317;253;18;100.0
+fbs-24-5-6;774;fbs-bloki;314;250;18;100.0
+fbs-24-6-6;775;fbs-bloki;309;253;18;100.0
+fbs-6-3-6;789;fbs-bloki;316;260;19;100.0
+fbs-6-4-3;788;fbs-bloki;326;262;19;100.0
+fbs-6-4-6;785;fbs-bloki;324;260;19;100.0
+fbs-6-5-6;784;fbs-bloki;313;257;19;100.0
+fbs-9-3-6;780;fbs-bloki;309;253;18;100.0
+fbs-9-4-3;787;fbs-bloki;327;255;18;100.0
+fbs-9-4-6;781;fbs-bloki;317;253;18;100.0
+fbs-9-5-6;782;fbs-bloki;314;250;18;100.0
+fbs-9-6-6;783;fbs-bloki;309;253;18;100.0
+fbs-bloki;107;fbs-bloki (страница раздела);595;407;33;18.2
+f-1;1473;fundamenty-pod-dorozhnye-znaki;309;284;24;29.2
+fundamenty-pod-dorozhnye-znaki;113;fundamenty-pod-dorozhnye-znaki (страница раздела);366;331;25;28.0
+vd-8;846;kolodtsy-unifitsirovannye;274;233;18;88.9
+vg-10;839;kolodtsy-unifitsirovannye;290;243;18;100.0
+vg-12;840;kolodtsy-unifitsirovannye;290;237;18;100.0
+vg-15;841;kolodtsy-unifitsirovannye;297;244;18;100.0
+vg-20;842;kolodtsy-unifitsirovannye;283;242;18;100.0
+vs-10;843;kolodtsy-unifitsirovannye;292;239;18;100.0
+vs-12;844;kolodtsy-unifitsirovannye;286;233;18;100.0
+vs-15;845;kolodtsy-unifitsirovannye;287;240;18;100.0
+kolodtsy-unifitsirovannye;102;kolodtsy-unifitsirovannye (страница раздела);515;443;32;9.4
+k1-a;838;koltsa-kolodeznye-ks;266;219;17;82.4
+ko-1;835;koltsa-kolodeznye-ks;270;218;16;93.8
+ko-1-5;836;koltsa-kolodeznye-ks;271;219;16;93.8
+ko-6;837;koltsa-kolodeznye-ks;263;217;17;88.2
+ks-10-10;759;koltsa-kolodeznye-ks;366;306;22;100.0
+ks-10-3;755;koltsa-kolodeznye-ks;363;303;22;100.0
+ks-10-5;756;koltsa-kolodeznye-ks;368;301;22;100.0
+ks-10-6;757;koltsa-kolodeznye-ks;378;304;22;100.0
+ks-10-9;649;koltsa-kolodeznye-ks;365;298;21;100.0
+ks-15-10;764;koltsa-kolodeznye-ks;367;307;22;100.0
+ks-15-3;760;koltsa-kolodeznye-ks;364;304;22;100.0
+ks-15-5;761;koltsa-kolodeznye-ks;369;302;22;100.0
+ks-15-6;762;koltsa-kolodeznye-ks;379;305;22;100.0
+ks-15-9;650;koltsa-kolodeznye-ks;366;299;21;100.0
+ks-20-10;769;koltsa-kolodeznye-ks;363;303;23;100.0
+ks-20-3;765;koltsa-kolodeznye-ks;360;300;23;100.0
+ks-20-5;766;koltsa-kolodeznye-ks;365;298;23;100.0
+ks-20-6;767;koltsa-kolodeznye-ks;375;301;23;100.0
+ks-20-9;768;koltsa-kolodeznye-ks;362;295;22;100.0
+ks-25-6;770;koltsa-kolodeznye-ks;346;300;22;100.0
+ks-25-9;771;koltsa-kolodeznye-ks;348;302;22;100.0
+ks-7-0-1;748;koltsa-kolodeznye-ks;365;314;22;100.0
+ks-7-1-5;749;koltsa-kolodeznye-ks;372;314;22;100.0
+ks-7-10;754;koltsa-kolodeznye-ks;371;311;22;100.0
+ks-7-3;750;koltsa-kolodeznye-ks;381;308;22;100.0
+ks-7-5;751;koltsa-kolodeznye-ks;379;306;22;100.0
+ks-7-6;752;koltsa-kolodeznye-ks;382;309;22;100.0
+ks-7-9;753;koltsa-kolodeznye-ks;370;303;21;100.0
+koltsa-kolodeznye-ks;108;koltsa-kolodeznye-ks (страница раздела);689;459;32;25.0
+kcd-10-10;830;koltsa-s-dnom-ktsd;321;256;20;100.0
+kcd-10-6;828;koltsa-s-dnom-ktsd;306;256;20;100.0
+kcd-10-9;829;koltsa-s-dnom-ktsd;321;256;20;100.0
+kcd-15-10;832;koltsa-s-dnom-ktsd;315;257;20;100.0
+kcd-15-9;831;koltsa-s-dnom-ktsd;322;257;20;100.0
+kcd-20-10;834;koltsa-s-dnom-ktsd;306;255;20;100.0
+kcd-20-9;833;koltsa-s-dnom-ktsd;320;255;20;100.0
+kcd-7-10;827;koltsa-s-dnom-ktsd;320;256;20;100.0
+kcd-7-9;826;koltsa-s-dnom-ktsd;313;256;20;100.0
+koltsa-s-dnom-ktsd;109;koltsa-s-dnom-ktsd (страница раздела);594;505;35;31.4
+pk-10;818;kryshki-kolodtsev-pp;295;236;18;100.0
+pk-12;819;kryshki-kolodtsev-pp;277;239;18;100.0
+pk-15;820;kryshki-kolodtsev-pp;291;246;18;100.0
+pk-20;821;kryshki-kolodtsev-pp;295;244;18;100.0
+pk-25;822;kryshki-kolodtsev-pp;281;244;18;100.0
+pp-10-1;798;kryshki-kolodtsev-pp;306;261;19;100.0
+pp-10-2;799;kryshki-kolodtsev-pp;313;261;19;100.0
+pp-12-2;800;kryshki-kolodtsev-pp;292;255;19;100.0
+pp-15-1;801;kryshki-kolodtsev-pp;313;262;19;100.0
+pp-15-2;802;kryshki-kolodtsev-pp;320;262;19;100.0
+pp-20-1;803;kryshki-kolodtsev-pp;305;260;19;100.0
+pp-20-2;804;kryshki-kolodtsev-pp;312;260;19;100.0
+pp-25-2;805;kryshki-kolodtsev-pp;310;251;19;100.0
+pp-8-1;797;kryshki-kolodtsev-pp;307;248;19;100.0
+ppl-10-1;817;kryshki-kolodtsev-pp;306;261;21;100.0
+ppl-10-2;816;kryshki-kolodtsev-pp;313;261;21;100.0
+ppl-15-1;815;kryshki-kolodtsev-pp;307;262;21;100.0
+ppl-15-2;814;kryshki-kolodtsev-pp;314;262;21;100.0
+ppl-20-1;813;kryshki-kolodtsev-pp;317;260;21;100.0
+ppl-20-2;812;kryshki-kolodtsev-pp;318;260;21;100.0
+ppz-10-1;811;kryshki-kolodtsev-pp;321;262;21;100.0
+ppz-10-2;810;kryshki-kolodtsev-pp;321;262;21;100.0
+ppz-15-1;809;kryshki-kolodtsev-pp;322;263;21;100.0
+ppz-15-2;808;kryshki-kolodtsev-pp;322;263;21;100.0
+ppz-20-1;807;kryshki-kolodtsev-pp;320;261;21;100.0
+ppz-20-2;806;kryshki-kolodtsev-pp;320;261;21;100.0
+pvg-15;823;kryshki-kolodtsev-pp;295;236;18;100.0
+pvg-20;824;kryshki-kolodtsev-pp;287;243;18;100.0
+pvg-25;825;kryshki-kolodtsev-pp;280;243;18;100.0
+kryshki-kolodtsev-pp;110;kryshki-kolodtsev-pp (страница раздела);696;435;31;19.4
+bl-1-201-4;1457;lekalnye-bloki-bl;387;311;25;100.0
+bl-1-201-4a;1458;lekalnye-bloki-bl;387;311;25;100.0
+bl-4-201-8;1459;lekalnye-bloki-bl;387;311;25;100.0
+bl-4-201-8a;1460;lekalnye-bloki-bl;387;311;25;100.0
+lekalnye-bloki-bl;114;lekalnye-bloki-bl (страница раздела);501;398;30;33.3
+kl;600;lestnicy-dlya-kolodcev;477;462;40;45.0
+promyshlennye-lestnicy;616;lestnicy-dlya-kolodcev;852;761;51;2.0
+skoby-hodovye;601;lestnicy-dlya-kolodcev;644;583;39;0.0
+vl-2;599;lestnicy-dlya-kolodcev;477;462;39;48.7
+lestnicy-dlya-kolodcev;598;lestnicy-dlya-kolodcev (страница раздела);594;566;43;9.3
+lotki-l-3006-1-2-87;856;lotki-l-3006-1-2-87 (страница раздела);1122;246;17;52.9
+lotki-lk-3006-1-8;857;lotki-lk-3006-1-8 (страница раздела);1234;245;17;47.1
+db;850;lyuki-chugunnye;254;220;17;88.2
+dk;851;lyuki-chugunnye;244;214;17;88.2
+lch-l;847;lyuki-chugunnye;251;219;17;88.2
+lch-t;848;lyuki-chugunnye;259;224;18;83.3
+lch-tmr;849;lyuki-chugunnye;266;228;17;88.2
+lyuki-chugunnye;111;lyuki-chugunnye (страница раздела);479;438;33;15.2
+lp-8-1;621;neprohodnye-kanaly-nkl;1146;979;65;7.7
+neprohodnye-kanaly-nkl;103;neprohodnye-kanaly-nkl (страница раздела);370;302;21;23.8
+kco-3;855;opornye-plity-op;255;210;18;88.9
+op-1d;648;opornye-plity-op;260;212;18;83.3
+op-1k;647;opornye-plity-op;263;221;18;83.3
+uop-6;854;opornye-plity-op;262;214;18;88.9
+opornye-plity-op;104;opornye-plity-op (страница раздела);579;539;40;17.5
+st-1;1471;otkosnye-stenki;374;277;23;100.0
+st-2;1472;otkosnye-stenki;374;277;23;100.0
+stk-10;1467;otkosnye-stenki;393;296;24;100.0
+stk-11;1468;otkosnye-stenki;393;296;24;100.0
+stk-12;1469;otkosnye-stenki;393;296;24;100.0
+stk-13;1470;otkosnye-stenki;393;296;24;100.0
+otkosnye-stenki;115;otkosnye-stenki (страница раздела);516;368;29;34.5
+plity-p-3006-1-2-87;858;plity-p-3006-1-2-87 (страница раздела);1074;227;16;50.0
+vp-18;618;plity-perekrytiya-kanalov-vp;1053;953;60;6.7
+plity-perekrytiya-kanalov-vp;105;plity-perekrytiya-kanalov-vp (страница раздела);881;355;23;26.1
+plity-pt-3006-1-8;859;plity-pt-3006-1-8 (страница раздела);1195;235;16;50.0
+stk-1;1461;portalnye-stenki-stk;391;296;26;100.0
+stk-2;1462;portalnye-stenki-stk;391;296;26;100.0
+stk-5;1463;portalnye-stenki-stk;390;295;26;100.0
+stk-6;1464;portalnye-stenki-stk;391;296;26;100.0
+stk-7;1465;portalnye-stenki-stk;390;295;26;100.0
+stk-8;1466;portalnye-stenki-stk;391;296;26;100.0
+portalnye-stenki-stk;116;portalnye-stenki-stk (страница раздела);539;394;30;33.3
+dorozhnomu-podryadchiku;627;resheniya;885;783;60;30.0
+fbs-dlya-stroitelstva;204;resheniya;536;313;20;30.0
+koltsa-dlya-inzhenernyh-setey;201;resheniya;446;319;20;35.0
+vodopropusknaya-truba-komplekt;202;resheniya;347;262;16;6.2
+zastroyshchiku;629;resheniya;798;716;58;31.0
+zhbi-dlya-teplotrass;203;resheniya;431;373;26;30.8
+zhkh-i-vodokanalu;628;resheniya;897;837;58;24.1
+kksr-3;622;telefonnye-kolodtsy-kks;999;841;61;4.9
+telefonnye-kolodtsy-kks;117;telefonnye-kolodtsy-kks (страница раздела);268;216;17;23.5
+zk-1-100;1445;vodopropusknye-truby-zk;436;338;26;100.0
+zk-14-132;1450;vodopropusknye-truby-zk;439;339;26;100.0
+zk-16-132;1454;vodopropusknye-truby-zk;440;339;26;100.0
+zk-2-100;1446;vodopropusknye-truby-zk;436;338;26;100.0
+zk-3-100;1447;vodopropusknye-truby-zk;436;338;26;100.0
+zk-3-150;1448;vodopropusknye-truby-zk;437;339;26;100.0
+zk-3-200;1449;vodopropusknye-truby-zk;438;339;26;100.0
+zk-8-100;1451;vodopropusknye-truby-zk;440;339;26;100.0
+zk-8-150;1452;vodopropusknye-truby-zk;440;339;26;100.0
+zk-8-200;1453;vodopropusknye-truby-zk;440;339;26;100.0
+zk-9-100;1455;vodopropusknye-truby-zk;440;339;26;100.0
+zk-9-200;1456;vodopropusknye-truby-zk;440;339;26;100.0
+vodopropusknye-truby-zk;119;vodopropusknye-truby-zk (страница раздела);669;413;29;31.0
+zvenya-ploskoe-opiranie-zkp;118;zvenya-ploskoe-opiranie-zkp (страница раздела);422;378;29;27.6
+blog;466;верхний уровень;3;3;1;0.0
+dostavka;582;верхний уровень;401;374;16;6.2
+home;1157;верхний уровень;237;237;11;90.9
+kontakty;469;верхний уровень;84;84;7;14.3
+o-kompanii;300;верхний уровень;210;210;15;0.0
+obem-betona-i-ves-zhbi;655;верхний уровень;1639;1005;58;0.0
+oplata-i-dostavka;301;верхний уровень;293;293;27;7.4
+opt;302;верхний уровень;226;226;19;5.3
+price;303;верхний уровень;188;44;4;0.0
+resheniya;200;верхний уровень;393;188;11;18.2
+sertifikaty;304;верхний уровень;179;179;15;0.0
+glavnaya;407;главная;237;237;11;90.9
