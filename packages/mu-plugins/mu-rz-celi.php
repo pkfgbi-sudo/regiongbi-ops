@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: РегионЖБИ — цели Метрики и метка источника в письме заявки
- * Description: Отправляет в Метрику четыре цели (zayavka, tel, mail, price) и дописывает к письму о заявке страницу, источник и московское время.
+ * Description: Отправляет в Метрику четыре цели (zayavka, tel, mail, price), дописывает к письму о заявке страницу, источник и московское время и ставит Reply-To, если в заявке указана настоящая почта.
  *
  * Задание 008. Две задачи.
  *
@@ -158,3 +158,75 @@ add_filter('wpcf7_mail_components', function ($components, $contact_form = null,
 
     return $components;
 }, 10, 3);
+
+/* --------------------------------------------- 3. обратный адрес в письме заявки */
+
+/*
+ * Задание 017. В форме 473 появилось необязательное поле почты
+ * [email your-email]. Обратный адрес ставится отсюда, фильтром, а не
+ * заголовком «Reply-To: [your-email]» в настройках формы — по одной причине:
+ * поле необязательное. Заголовок формы подставляется всегда, и на заявке без
+ * почты в письме снова оказался бы пустой Reply-To — ровно то, что убрали
+ * заданием 014. Фильтр умеет промолчать: почта настоящая — заголовок есть,
+ * пусто или мусор — заголовка нет вовсе, и почтовый клиент отвечает на From,
+ * то есть на zakaz@regiongbi.ru (его ставит mu-rz-smtp.php). Проверено на
+ * живых письмах 05.09.2026: без этого фильтра Reply-To в письме не появляется
+ * вообще — PHPMailer сам из From его не подставляет.
+ */
+
+/** Почта из отправленной формы. '' — поля нет, оно пустое или пришло не строкой. */
+function rz_celi_posted_email($field = 'your-email') {
+    $raw = '';
+    if (class_exists('WPCF7_Submission')) {
+        $submission = WPCF7_Submission::get_instance();
+        if ($submission) {
+            $data = $submission->get_posted_data($field);
+            if (is_array($data)) $data = reset($data);
+            if (is_string($data)) $raw = $data;
+        }
+    }
+    /* Запасной путь — прямой $_POST: нужен, чтобы фильтр можно было проверить
+       вызовом из wp eval, где объекта отправки CF7 не существует. */
+    if ($raw === '' && isset($_POST[$field])) {
+        $data = $_POST[$field];
+        if (is_array($data)) $data = reset($data);
+        if (is_string($data)) $raw = $data;
+    }
+    return trim(rz_celi_clean($raw, 200));
+}
+
+add_filter('wpcf7_mail_components', function ($components, $contact_form = null, $mail = null) {
+    if (!is_array($components)) return $components;
+
+    /* Только основное письмо администратору: адресом клиента в автоответе
+       (mail_2, выключен) не распоряжаемся. */
+    if (is_object($mail) && method_exists($mail, 'name') && $mail->name() !== 'mail') {
+        return $components;
+    }
+
+    $adres = rz_celi_posted_email();
+    if ($adres === '' || !is_email($adres)) return $components;  // пусто или мусор — заголовка нет
+
+    $zagolovki = isset($components['additional_headers']) ? $components['additional_headers'] : '';
+
+    /* CF7 отдаёт additional_headers то строкой, то массивом строк — зависит от
+       версии. Обрабатываем оба вида, иначе после обновления плагина фильтр
+       молча перестанет работать. */
+    if (is_array($zagolovki)) {
+        foreach ($zagolovki as $stroka) {
+            if (is_string($stroka) && preg_match('/^\s*reply-to\s*:/i', $stroka)) return $components;
+        }
+        $zagolovki[] = 'Reply-To: ' . $adres;
+        $components['additional_headers'] = $zagolovki;
+        return $components;
+    }
+
+    $zagolovki = rtrim((string) $zagolovki, "\r\n");
+    /* Если Reply-To кто-то уже поставил (например, вернули в настройки формы) —
+       не задваиваем: два одинаковых заголовка почтовые клиенты показывают
+       по-разному. */
+    if (preg_match('/^\s*reply-to\s*:/im', $zagolovki)) return $components;
+
+    $components['additional_headers'] = ($zagolovki === '' ? '' : $zagolovki . "\n") . 'Reply-To: ' . $adres;
+    return $components;
+}, 11, 3);
