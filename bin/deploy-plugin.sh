@@ -80,7 +80,9 @@ if ! "${SSH[@]}" "
   mkdir -p $B
   cd $SITE_PATH
   wp db export $B/db-before.sql --quiet
-  if [ -f $BOEV ]; then cp -p $BOEV $B/$NAME; echo 'BYL: da'; else echo 'BYL: net'; fi
+  # Без -p: на Бегете cp -p падает на попытке сохранить владельца
+  # («Operation not permitted»), а нам нужно содержимое, а не права.
+  if [ -f $BOEV ]; then cp $BOEV $B/$NAME; echo 'BYL: da'; else echo 'BYL: net'; fi
   echo '--- md5 доехавшего временного файла'
   md5sum $TMPN
   echo '--- php -l по временному файлу'
@@ -164,7 +166,7 @@ echo "!!! ПРОВЕРКА НЕ ПРОЙДЕНА ($OTKAT) — возвращаю
 "${SSH[@]}" "
   cd $SITE_PATH
   if [ -f $B/$NAME ]; then
-    cp -p $B/$NAME $BOEV && echo 'вернул прежний файл из бэкапа'
+    cp $B/$NAME $BOEV && echo 'вернул прежний файл из бэкапа'
   else
     mv $BOEV $BOEV.otkat-$STAMP && echo 'прежнего файла не было — новый переименован в $NAME.otkat-$STAMP'
   fi
