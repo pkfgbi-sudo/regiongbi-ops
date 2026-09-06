@@ -60,11 +60,17 @@ JSON="$REPO_DIR/packages/$PKG.json"
 [ -f "$JSON" ] || { echo "нет файла $JSON"; exit 1; }
 python3 -c "import json,sys;d=json.load(open(sys.argv[1]));print('    позиций:',len(d['items']))" "$JSON"
 
-# какой публикатор нужен: страницы или записи блога
+# Какой публикатор нужен: страницы или записи блога.
+# Признак записи блога — slug БЕЗ url: записи ищутся по слагу, страницы по пути.
+# До задания 020 признаком был один только slug, и пакет страниц, где рядом с url
+# стоял ещё и slug (vp-01), уезжал в публикатор записей, который страниц не видит.
 if python3 - "$JSON" <<'EOF'
 import json,sys
 d=json.load(open(sys.argv[1]))
-sys.exit(0 if any('slug' in i for i in d['items']) else 1)
+items = d['items']
+est_url  = any(i.get('url')  for i in items)
+est_slug = any(i.get('slug') for i in items)
+sys.exit(0 if (est_slug and not est_url) else 1)
 EOF
 then TOOL=rz-blog.php; KIND="записи блога"
 else TOOL=rzpub.php;   KIND="страницы"
