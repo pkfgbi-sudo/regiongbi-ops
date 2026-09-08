@@ -25,6 +25,11 @@
  *                  страница ляжет не по тому адресу, который проверяли.
  *   roditel_slug — родитель для всех позиций пакета, по слагу, а не по url.
  *                  Позиционный "parent" по-прежнему главнее.
+ *
+ * Задание 025 (пакет kollektory-02, где родитель у карточек разный): поле
+ * roditel_slug читается ещё и у самой позиции. Порядок старшинства:
+ *   parent позиции (url) > roditel_slug позиции > roditel_slug пакета.
+ * Пакеты с одним родителем на всех работают как раньше.
  */
 
 if (!defined('WP_CLI') || !WP_CLI) {
@@ -135,7 +140,8 @@ foreach ($items as $it) {
     }
     $page  = rz_page_by_url($url);
 
-    // родитель: позиционный parent по url, иначе общий roditel_slug пакета
+    // родитель: позиционный parent по url, иначе roditel_slug позиции,
+    // иначе общий roditel_slug пакета
     $parent_id = 0;
     if (!empty($it['parent'])) {
         $pp = rz_page_by_url($it['parent']);
@@ -144,12 +150,16 @@ foreach ($items as $it) {
         } else {
             WP_CLI::warning("[$url] родитель не найден: {$it['parent']}");
         }
-    } elseif ($roditel_slug !== '') {
-        $pp = rz_page_by_slug($roditel_slug);
-        if ($pp) {
-            $parent_id = $pp->ID;
-        } else {
-            WP_CLI::warning("[$url] родитель пакета не найден по слагу: $roditel_slug");
+    } else {
+        $rs = !empty($it['roditel_slug']) ? trim($it['roditel_slug'], '/') : $roditel_slug;
+        $chey = !empty($it['roditel_slug']) ? 'позиции' : 'пакета';
+        if ($rs !== '') {
+            $pp = rz_page_by_slug($rs);
+            if ($pp) {
+                $parent_id = $pp->ID;
+            } else {
+                WP_CLI::warning("[$url] родитель $chey не найден по слагу: $rs");
+            }
         }
     }
 
