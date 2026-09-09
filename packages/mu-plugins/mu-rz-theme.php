@@ -98,31 +98,44 @@ add_action('wp_head', function () {
     $css = <<<CSS
 /* ------------------------------------------------ палитра и переменные */
 :root{
-  --rz-paper:#F2F1EC;      /* фон страницы, цвет бумаги */
+  --rz-paper:#F4F4F1;      /* фон страницы, цвет бумаги */
   --rz-surface:#FFFFFF;    /* карточки и таблицы */
-  --rz-tint:#F7F7F3;       /* шапки таблиц, подложки */
-  --rz-ink:#16191A;        /* основной текст и заголовки */
-  --rz-ink-2:#434745;      /* текст абзацев */
-  --rz-muted:#7C817F;      /* подписи, служебное */
-  --rz-line:#D9DBD4;       /* рамки */
-  --rz-line-2:#E6E7E1;     /* внутренние линии таблиц */
-  --rz-accent:#B4341F;     /* акцент: цвет размерных линий на чертеже */
-  --rz-accent-d:#8F2917;
+  --rz-tint:#F6F6F3;       /* шапки таблиц, подложки */
+  --rz-ink:#2A2F33;        /* графит: заголовки, шапка, вторичные кнопки */
+  --rz-ink-2:#3C4145;      /* текст абзацев */
+  --rz-muted:#676C71;      /* подписи, служебное */
+  --rz-line:#DEDEDA;       /* рамки */
+  --rz-line-2:#E9E9E5;     /* внутренние линии таблиц */
+
+  /* Янтарь разведён на четыре токена по ролям, и это не украшательство.
+     Белый текст на #C8791A даёт контраст 3,38 при норме 4,5 — то есть на
+     янтарной заливке писать белым нельзя вообще нигде. Поэтому:
+       --rz-accent    заливка главного действия, текст на ней только тёмный;
+       --rz-accent-h  та же заливка при наведении — СВЕТЛЕЕ, не темнее;
+       --rz-accent-fg текст и значки НА янтарной заливке (5,21 на акценте);
+       --rz-accent-t  янтарь как цвет текста на светлом фоне (6,31 на белом).
+     Путать --rz-accent и --rz-accent-t нельзя: первый на тексте нечитаем,
+     второй на заливке выглядит грязью. */
+  --rz-accent:#C8791A;     /* янтарь: цвет каски и спецтехники, только на действии */
+  --rz-accent-h:#D68A2C;   /* наведение: светлее заливки, 6,33 с тёмным текстом */
+  --rz-accent-fg:#17191A;  /* текст на янтарной заливке */
+  --rz-accent-t:#8A5310;   /* янтарь-текст на бумаге и белом */
 
   --rz-display:$display;
   --rz-body:$body;
   --rz-mono:$mono;
 
   /* Переменные Blocksy: перекрашивают шапку, меню, кнопки, формы, пагинацию.
-     Ссылки делаем цветом текста, а акцент оставляем для наведения и призывов —
-     красный в каждой ссылке превращает страницу в разноцветную кашу. */
-  --theme-palette-color-1:#16191A;
-  --theme-palette-color-2:#B4341F;
-  --theme-palette-color-3:#434745;
-  --theme-palette-color-4:#16191A;
-  --theme-palette-color-5:#D9DBD4;
-  --theme-palette-color-6:#F2F1EC;
-  --theme-palette-color-7:#F7F7F3;
+     Ссылки делаем цветом текста, а акцент оставляем для главного действия и
+     наведения — янтарь в каждой ссылке превращает страницу в разноцветную
+     кашу и вдобавок плохо читается мелким кеглем. */
+  --theme-palette-color-1:#2A2F33;
+  --theme-palette-color-2:#C8791A;
+  --theme-palette-color-3:#3C4145;
+  --theme-palette-color-4:#2A2F33;
+  --theme-palette-color-5:#DEDEDA;
+  --theme-palette-color-6:#F4F4F1;
+  --theme-palette-color-7:#F6F6F3;
   --theme-palette-color-8:#FFFFFF;
 
   --theme-font-family:var(--rz-body);
@@ -156,7 +169,7 @@ h1,.entry-title{font-weight:600;font-size:clamp(30px,3.6vw,46px);line-height:1.0
 .entry-content h3{font-weight:500;font-size:clamp(19px,1.8vw,22px);line-height:1.25;margin:1.6em 0 .45em}
 .entry-content p{color:var(--rz-ink-2)}
 .entry-content a{color:var(--rz-ink);text-decoration:none;border-bottom:1px solid var(--rz-line)}
-.entry-content a:hover{color:var(--rz-accent);border-bottom-color:var(--rz-accent)}
+.entry-content a:hover{color:var(--rz-accent-t);border-bottom-color:var(--rz-accent-t)}
 
 /* Маркер списка — точка размерной линии, а не жирный кружок. */
 .entry-content ul{list-style:none;padding-left:0}
@@ -226,7 +239,7 @@ h1,.entry-title{font-weight:600;font-size:clamp(30px,3.6vw,46px);line-height:1.0
 .entry-content table td:not(:first-child){font-family:var(--rz-mono);font-size:13.5px}
 
 .entry-content table td:first-child a{border-bottom:0}
-.entry-content table td:first-child a:hover{border-bottom:1px solid var(--rz-accent)}
+.entry-content table td:first-child a:hover{border-bottom:1px solid var(--rz-accent-t)}
 /* Полосатости нет: ряды разделяет тонкая линия, как в спецификации. */
 .entry-content table tbody tr:nth-child(even){background:transparent}
 .entry-content table tbody tr:hover{background:var(--rz-tint)}
@@ -243,7 +256,7 @@ h1,.entry-title{font-weight:600;font-size:clamp(30px,3.6vw,46px);line-height:1.0
 .entry-content summary::-webkit-details-marker{display:none}
 .entry-content summary::after{
   content:"+";position:absolute;right:0;top:11px;
-  color:var(--rz-accent);font-size:1.4rem;font-weight:400;line-height:1
+  color:var(--rz-accent-t);font-size:1.4rem;font-weight:400;line-height:1
 }
 .entry-content details[open] summary::after{content:"\\2013"}
 .entry-content details p{margin:0 0 15px;color:var(--rz-ink-2);font-size:15px}
@@ -260,7 +273,35 @@ h1,.entry-title{font-weight:600;font-size:clamp(30px,3.6vw,46px);line-height:1.0
 }
 .wp-block-button__link:hover,.wp-element-button:hover,
 .ct-button:hover,button[type=submit]:hover,input[type=submit]:hover,.wpcf7-submit:hover{
-  background:var(--rz-accent);color:#fff
+  background:var(--rz-accent);color:var(--rz-accent-fg)
+}
+
+/* Главное действие — янтарное сразу, а не только под курсором: на телефоне
+   наведения нет вовсе, и раньше акцент там не показывался ни разу.
+   Кнопка отправки заявки — единственная такая на странице; прайс, пагинация
+   и кнопки в тексте остаются графитовыми, чтобы янтарь не обесценился.
+
+   Селектор длиннее, чем хочется: правило выше ловит .wpcf7-submit ещё и как
+   input[type=submit] (специфичность 0-1-1), и голого класса 0-1-0 не хватило
+   бы, чтобы его перебить. */
+.wpcf7-submit,
+input[type=submit].wpcf7-submit,
+button[type=submit].wpcf7-submit{
+  background:var(--rz-accent);color:var(--rz-accent-fg)
+}
+.wpcf7-submit:hover,
+input[type=submit].wpcf7-submit:hover,
+button[type=submit].wpcf7-submit:hover{
+  background:var(--rz-accent-h);color:var(--rz-accent-fg)
+}
+
+/* Кнопка «Запросить счёт» в шапке карточки (mu-rz-card.php). Заливка и цвет
+   текста заданы там инлайном — их инлайн и держит; сюда вынесено только
+   наведение, которого у инлайнового стиля быть не может. Отсюда !important:
+   иначе инлайновая заливка не сдвинется. */
+.entry-content a.rz-card-cta:hover{
+  background:var(--rz-accent-h)!important;border-color:var(--rz-accent-h)!important;
+  color:var(--rz-accent-fg)!important
 }
 .wp-block-button.is-style-outline .wp-block-button__link{
   background:transparent;color:var(--rz-ink);border:1px solid var(--rz-ink)
@@ -291,7 +332,7 @@ main.site-main > h1.page-title{max-width:1290px;margin:36px auto 24px;padding:0 
 
 .ct-breadcrumbs{font-family:var(--rz-mono);font-size:12.5px;color:var(--rz-muted)}
 .ct-breadcrumbs a{color:var(--rz-muted)}
-.ct-breadcrumbs a:hover{color:var(--rz-accent)}
+.ct-breadcrumbs a:hover{color:var(--rz-accent-t)}
 
 /* ------------------------------------------- блоки, покрашенные в содержимом
  *
@@ -319,7 +360,7 @@ main.site-main > h1.page-title{max-width:1290px;margin:36px auto 24px;padding:0 
   background-color:var(--rz-ink)!important;color:#fff!important
 }
 .entry-content .wp-block-button__link[style*="background-color:#2f6b52"]:hover{
-  background-color:var(--rz-accent)!important
+  background-color:var(--rz-accent)!important;color:var(--rz-accent-fg)!important
 }
 .entry-content [style*="background-color:#23483a"]{
   background-color:var(--rz-ink)!important;border-radius:0!important;
@@ -366,7 +407,7 @@ body>a[href^="tel:"]{
   letter-spacing:.01em!important;
   box-shadow:0 6px 20px rgba(22,25,26,.18)!important
 }
-body>a[href^="tel:"]:hover{background:var(--rz-accent)!important}
+body>a[href^="tel:"]:hover{background:var(--rz-accent)!important;color:var(--rz-accent-fg)!important}
 
 /* ------------------------------------------------------------ телефон */
 @media (max-width:767px){

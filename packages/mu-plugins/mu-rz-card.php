@@ -24,6 +24,10 @@
  * таблиц) и mu-rz-related.php (20, блок «Смотрите также»). В блоке нет
  * <table>, поэтому обёртка прокрутки его не касается.
  *
+ * Класс rz-card-cta на главной кнопке — точка сцепки с mu-rz-theme.php:
+ * заливка и цвет текста заданы здесь инлайном, а наведение живёт там, потому
+ * что инлайновый стиль :hover не умеет.
+ *
  * Разметку блок не трогает вовсе: mu-rz-product-schema.php читает ту же мету
  * _rz_product, а mu-rz-faq.php разбирает СЫРОЕ $post->post_content, куда
  * фильтр the_content не достаёт.
@@ -37,13 +41,16 @@ function rz_card_skip_specs() {
 
 /* Цвета берём из переменных mu-rz-theme.php, запасные значения — те же самые.
  * Свой набор цветов рядом с темой сайта смотрелся бы чужим блоком. */
-if (!defined('RZ_CARD_INK'))     define('RZ_CARD_INK',     'var(--rz-ink,#16191A)');
-if (!defined('RZ_CARD_MUTED'))   define('RZ_CARD_MUTED',   'var(--rz-muted,#7C817F)');
-if (!defined('RZ_CARD_LINE'))    define('RZ_CARD_LINE',    'var(--rz-line,#D9DBD4)');
-if (!defined('RZ_CARD_LINE2'))   define('RZ_CARD_LINE2',   'var(--rz-line-2,#E6E7E1)');
-if (!defined('RZ_CARD_TINT'))    define('RZ_CARD_TINT',    'var(--rz-tint,#F7F7F3)');
+if (!defined('RZ_CARD_INK'))     define('RZ_CARD_INK',     'var(--rz-ink,#2A2F33)');
+if (!defined('RZ_CARD_MUTED'))   define('RZ_CARD_MUTED',   'var(--rz-muted,#676C71)');
+if (!defined('RZ_CARD_LINE'))    define('RZ_CARD_LINE',    'var(--rz-line,#DEDEDA)');
+if (!defined('RZ_CARD_LINE2'))   define('RZ_CARD_LINE2',   'var(--rz-line-2,#E9E9E5)');
+if (!defined('RZ_CARD_TINT'))    define('RZ_CARD_TINT',    'var(--rz-tint,#F6F6F3)');
 if (!defined('RZ_CARD_SURFACE')) define('RZ_CARD_SURFACE', 'var(--rz-surface,#FFFFFF)');
-if (!defined('RZ_CARD_ACCENT'))  define('RZ_CARD_ACCENT',  'var(--rz-accent,#B4341F)');
+if (!defined('RZ_CARD_ACCENT'))  define('RZ_CARD_ACCENT',  'var(--rz-accent,#C8791A)');
+/* Текст на янтарной заливке — только тёмный: белый даёт на #C8791A контраст
+   3,38 при норме 4,5. Задание 030. */
+if (!defined('RZ_CARD_ACCENT_FG')) define('RZ_CARD_ACCENT_FG', 'var(--rz-accent-fg,#17191A)');
 
 /** Данные товара страницы или null. Блок ставим только там, где есть что показать. */
 function rz_card_data($post_id) {
@@ -142,10 +149,10 @@ function rz_card_html($d, $post_id) {
        «переход к форме» в кабинете Метрики нет — см. отчёт 028. */
     $knopki =
         '<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px">'
-      . '<a href="/kontakty/#zayavka" data-rz-cel="zayavka"'
+      . '<a href="/kontakty/#zayavka" data-rz-cel="zayavka" class="rz-card-cta"'
       . ' style="flex:1 1 auto;text-align:center;padding:12px 22px;background:' . RZ_CARD_ACCENT . ';'
-      . 'color:#fff;border:1px solid ' . RZ_CARD_ACCENT . ';border-radius:8px;text-decoration:none;'
-      . 'font-weight:600;font-size:15px">Запросить счёт</a>'
+      . 'color:' . RZ_CARD_ACCENT_FG . ';border:1px solid ' . RZ_CARD_ACCENT . ';border-radius:8px;'
+      . 'text-decoration:none;font-weight:600;font-size:15px">Запросить счёт</a>'
       . '<a href="tel:+79960970980" data-rz-cel="tel"'
       . ' style="flex:1 1 auto;text-align:center;padding:12px 22px;background:' . RZ_CARD_SURFACE . ';'
       . 'color:' . RZ_CARD_INK . ';border:1px solid ' . RZ_CARD_LINE . ';border-radius:8px;'
