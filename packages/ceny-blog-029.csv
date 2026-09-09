@@ -1,28 +1,18 @@
 zapis;id;gde;marka;v_bloge;na_sayte;kartochka;itog
 drenazhnyy-kolodec-iz-kolec;711;таблица;КС 10-10;7650;2550;/catalog/koltsa-kolodeznye-ks/ks-10-10/;РАСХОЖДЕНИЕ
-drenazhnyy-kolodec-iz-kolec;711;таблица;ПП 10-2;1810;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;РАСХОЖДЕНИЕ
 kak-sobrat-kolodec-komplektom;620;проза;ПК 10;6578;3150;/catalog/kryshki-kolodtsev-pp/pk-10/;РАСХОЖДЕНИЕ
 kak-sobrat-kolodec-komplektom;620;проза;ПК 10;13156;3150;/catalog/kryshki-kolodtsev-pp/pk-10/;РАСХОЖДЕНИЕ
-kak-sobrat-kolodec-komplektom;620;проза;ПП 10-2;1810;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;РАСХОЖДЕНИЕ
 kcd-ili-kolco-s-dnishchem;687;проза;ПН 10;3870;1520;/catalog/dnishcha-kolodtsev-pd/pn-10/;РАСХОЖДЕНИЕ
 kcd-ili-kolco-s-dnishchem;687;проза;ПН 15;7490;3330;/catalog/dnishcha-kolodtsev-pd/pn-15/;РАСХОЖДЕНИЕ
 komplekt-vodopropusknoy-truby;403;проза;ЗК 3.200;95130;15855;/catalog/vodopropusknye-truby-zk/zk-3-200/;РАСХОЖДЕНИЕ
 komplekt-vodopropusknoy-truby;403;проза;СТК 5;43054;21527;/catalog/portalnye-stenki-stk/stk-5/;РАСХОЖДЕНИЕ
-kryshki-kolodcev-pp-pk-pvg;402;проза;ПК 15;6710;7265;/catalog/kryshki-kolodtsev-pp/pk-15/;РАСХОЖДЕНИЕ
 kryshki-kolodcev-pp-pk-pvg;402;проза;ППЗ 20-1;8820;7510;/catalog/kryshki-kolodtsev-pp/ppz-20-1/;РАСХОЖДЕНИЕ
 kryshki-kolodcev-pp-pk-pvg;402;проза;ППЛ 20-1;8660;7350;/catalog/kryshki-kolodtsev-pp/ppl-20-1/;РАСХОЖДЕНИЕ
-kryshki-kolodcev-pp-pk-pvg;402;таблица;ПК 15;6710;7265;/catalog/kryshki-kolodtsev-pp/pk-15/;РАСХОЖДЕНИЕ
-kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 10-2;1810;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;РАСХОЖДЕНИЕ
-kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 20-2;6810;8420;/catalog/kryshki-kolodtsev-pp/pp-20-2/;РАСХОЖДЕНИЕ
-op-ili-pp-chem-otlichayutsya;690;проза;ПП 10-2;1810;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;РАСХОЖДЕНИЕ
-op-ili-pp-chem-otlichayutsya;690;таблица;ПП 10-2;1810;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;РАСХОЖДЕНИЕ
-op-ili-pp-chem-otlichayutsya;690;таблица;ПП 20-2;6810;8420;/catalog/kryshki-kolodtsev-pp/pp-20-2/;РАСХОЖДЕНИЕ
 raschet-kolets-dlya-kolodca;400;проза;КС 10-10;10200;2550;/catalog/koltsa-kolodeznye-ks/ks-10-10/;РАСХОЖДЕНИЕ
 raschet-kolets-dlya-kolodca;400;проза;КС 10-5;10920;1520;/catalog/koltsa-kolodeznye-ks/ks-10-5/;РАСХОЖДЕНИЕ
-raschet-kolets-dlya-kolodca;400;проза;ПП 10-2;1810;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;РАСХОЖДЕНИЕ
-raschet-kolets-dlya-kolodca;400;проза;ПП 10-2;20100;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;РАСХОЖДЕНИЕ
-zhbi-dlya-livnevoy-kanalizacii;702;проза;ПП 10-2;1810;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;РАСХОЖДЕНИЕ
+raschet-kolets-dlya-kolodca;400;проза;ПП 10-2;20800;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;РАСХОЖДЕНИЕ
 drenazhnyy-kolodec-iz-kolec;711;таблица;ПН 10;1520;1520;/catalog/dnishcha-kolodtsev-pd/pn-10/;совпало
+drenazhnyy-kolodec-iz-kolec;711;таблица;ПП 10-2;2484;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;совпало
 fbs-ili-monolitnyy-fundament;708;проза;ФБС 12-4-6;2250;2250;/catalog/fbs-bloki/fbs-12-4-6/;совпало
 fbs-ili-monolitnyy-fundament;708;проза;ФБС 24-4-6;3970;3970;/catalog/fbs-bloki/fbs-24-4-6/;совпало
 fbs-ili-monolitnyy-fundament;708;проза;ФБС 24-5-6;4750;4750;/catalog/fbs-bloki/fbs-24-5-6/;совпало
@@ -39,6 +29,7 @@ kak-sobrat-kolodec-komplektom;620;проза;КС 10-10;2550;2550;/catalog/kolts
 kak-sobrat-kolodec-komplektom;620;проза;КС 10-9;2350;2350;/catalog/koltsa-kolodeznye-ks/ks-10-9/;совпало
 kak-sobrat-kolodec-komplektom;620;проза;ПК 10;3150;3150;/catalog/kryshki-kolodtsev-pp/pk-10/;совпало
 kak-sobrat-kolodec-komplektom;620;проза;ПН 10;1520;1520;/catalog/dnishcha-kolodtsev-pd/pn-10/;совпало
+kak-sobrat-kolodec-komplektom;620;проза;ПП 10-2;2484;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;совпало
 kcd-ili-kolco-s-dnishchem;687;проза;КС 10-9;2350;2350;/catalog/koltsa-kolodeznye-ks/ks-10-9/;совпало
 kcd-ili-kolco-s-dnishchem;687;проза;КС 15-9;4160;4160;/catalog/koltsa-kolodeznye-ks/ks-15-9/;совпало
 kcd-ili-kolco-s-dnishchem;687;проза;КЦД 10-9;3480;3480;/catalog/koltsa-s-dnom-ktsd/kcd-10-9/;совпало
@@ -83,19 +74,24 @@ komplekt-vodopropusknoy-truby;403;таблица;СТК 5;21527;21527;/catalog/p
 komplekt-vodopropusknoy-truby;403;таблица;СТК 6;25709;25709;/catalog/portalnye-stenki-stk/stk-6/;совпало
 komplekt-vodopropusknoy-truby;403;таблица;СТК 7;31006;31006;/catalog/portalnye-stenki-stk/stk-7/;совпало
 komplekt-vodopropusknoy-truby;403;таблица;СТК 8;37941;37941;/catalog/portalnye-stenki-stk/stk-8/;совпало
+kryshki-kolodcev-pp-pk-pvg;402;проза;ПВК-8;2400;2400;/catalog/kolodtsy-unifitsirovannye/pvk-8/;совпало
+kryshki-kolodcev-pp-pk-pvg;402;проза;ПК 15;7265;7265;/catalog/kryshki-kolodtsev-pp/pk-15/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;проза;ПП 15-2;3680;3680;/catalog/kryshki-kolodtsev-pp/pp-15-2/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПВГ 15;8240;8240;/catalog/kryshki-kolodtsev-pp/pvg-15/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПВГ 20;15190;15190;/catalog/kryshki-kolodtsev-pp/pvg-20/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПВГ 25;33500;33500;/catalog/kryshki-kolodtsev-pp/pvg-25/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПК 10;3150;3150;/catalog/kryshki-kolodtsev-pp/pk-10/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПК 12;5410;5410;/catalog/kryshki-kolodtsev-pp/pk-12/;совпало
+kryshki-kolodcev-pp-pk-pvg;402;таблица;ПК 15;7265;7265;/catalog/kryshki-kolodtsev-pp/pk-15/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПК 20;14410;14410;/catalog/kryshki-kolodtsev-pp/pk-20/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПК 25;33500;33500;/catalog/kryshki-kolodtsev-pp/pk-25/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 10-1;1470;1470;/catalog/kryshki-kolodtsev-pp/pp-10-1/;совпало
+kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 10-2;2484;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 12-2;2300;2300;/catalog/kryshki-kolodtsev-pp/pp-12-2/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 15-1;3410;3410;/catalog/kryshki-kolodtsev-pp/pp-15-1/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 15-2;3680;3680;/catalog/kryshki-kolodtsev-pp/pp-15-2/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 20-1;5830;5830;/catalog/kryshki-kolodtsev-pp/pp-20-1/;совпало
+kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 20-2;8420;8420;/catalog/kryshki-kolodtsev-pp/pp-20-2/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 25-2;20790;20790;/catalog/kryshki-kolodtsev-pp/pp-25-2/;совпало
 kryshki-kolodcev-pp-pk-pvg;402;таблица;ПП 8-1;1420;1420;/catalog/kryshki-kolodtsev-pp/pp-8-1/;совпало
 lyuki-chugunnye-klassy;405;таблица;ДБ;13794;13794;/catalog/lyuki-chugunnye/db/;совпало
@@ -115,13 +111,17 @@ markirovka-fbs;401;таблица;ФБС 9-3-6;1570;1570;/catalog/fbs-bloki/fbs-
 markirovka-fbs;401;таблица;ФБС 9-4-6;1810;1810;/catalog/fbs-bloki/fbs-9-4-6/;совпало
 markirovka-fbs;401;таблица;ФБС 9-5-6;2110;2110;/catalog/fbs-bloki/fbs-9-5-6/;совпало
 markirovka-fbs;401;таблица;ФБС 9-6-6;2420;2420;/catalog/fbs-bloki/fbs-9-6-6/;совпало
+op-ili-pp-chem-otlichayutsya;690;проза;ПП 10-2;2484;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;совпало
 op-ili-pp-chem-otlichayutsya;690;таблица;КЦО-3;12940;12940;/catalog/opornye-plity-op/kco-3/;совпало
+op-ili-pp-chem-otlichayutsya;690;таблица;ПП 10-2;2484;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;совпало
 op-ili-pp-chem-otlichayutsya;690;таблица;ПП 15-2;3680;3680;/catalog/kryshki-kolodtsev-pp/pp-15-2/;совпало
+op-ili-pp-chem-otlichayutsya;690;таблица;ПП 20-2;8420;8420;/catalog/kryshki-kolodtsev-pp/pp-20-2/;совпало
 op-ili-pp-chem-otlichayutsya;690;таблица;УОП-6;12400;12400;/catalog/opornye-plity-op/uop-6/;совпало
 portalnye-ili-otkosnye-stenki;681;проза;СТ-1;14779;14779;/catalog/otkosnye-stenki/st-1/;совпало
 portalnye-ili-otkosnye-stenki;681;проза;СТ-2;14779;14779;/catalog/otkosnye-stenki/st-2/;совпало
 raschet-kolets-dlya-kolodca;400;проза;ПК 10;3150;3150;/catalog/kryshki-kolodtsev-pp/pk-10/;совпало
 raschet-kolets-dlya-kolodca;400;проза;ПН 10;1520;1520;/catalog/dnishcha-kolodtsev-pd/pn-10/;совпало
+raschet-kolets-dlya-kolodca;400;проза;ПП 10-2;2484;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;совпало
 raschet-kolets-dlya-kolodca;400;таблица;КС 10-10;2550;2550;/catalog/koltsa-kolodeznye-ks/ks-10-10/;совпало
 raschet-kolets-dlya-kolodca;400;таблица;КС 10-3;1320;1320;/catalog/koltsa-kolodeznye-ks/ks-10-3/;совпало
 raschet-kolets-dlya-kolodca;400;таблица;КС 10-5;1520;1520;/catalog/koltsa-kolodeznye-ks/ks-10-5/;совпало
@@ -130,6 +130,7 @@ raschet-kolets-dlya-kolodca;400;таблица;КС 10-9;2350;2350;/catalog/kolt
 vp-ili-pk-v-chem-raznica;619;проза;ВП 16-6;2450;2450;/catalog/plity-perekrytiya-kanalov-vp/vp-16-6/;совпало
 zhbi-dlya-livnevoy-kanalizacii;702;проза;КС 10-9;2350;2350;/catalog/koltsa-kolodeznye-ks/ks-10-9/;совпало
 zhbi-dlya-livnevoy-kanalizacii;702;проза;ПН 10;1520;1520;/catalog/dnishcha-kolodtsev-pd/pn-10/;совпало
+zhbi-dlya-livnevoy-kanalizacii;702;проза;ПП 10-2;2484;2484;/catalog/kryshki-kolodtsev-pp/pp-10-2/;совпало
 zhbi-dlya-teplotrass-nkl-vp;404;таблица;ВП 16-6;2450;2450;/catalog/plity-perekrytiya-kanalov-vp/vp-16-6/;совпало
 zhbi-dlya-teplotrass-nkl-vp;404;таблица;ВП 22-6;2990;2990;/catalog/plity-perekrytiya-kanalov-vp/vp-22-6/;совпало
 zhbi-dlya-teplotrass-nkl-vp;404;таблица;ВП 28-12;10000;10000;/catalog/plity-perekrytiya-kanalov-vp/vp-28-12/;совпало
@@ -145,8 +146,8 @@ zk-ili-zkp-v-chem-raznica;678;проза;ЗК 8.150;23559;23559;/catalog/vodopro
 zk-ili-zkp-v-chem-raznica;678;проза;ЗК 8.200;31508;31508;/catalog/vodopropusknye-truby-zk/zk-8-200/;совпало
 zk-ili-zkp-v-chem-raznica;678;проза;ЗК 9.100;20800;20800;/catalog/vodopropusknye-truby-zk/zk-9-100/;совпало
 zk-ili-zkp-v-chem-raznica;678;проза;ЗК 9.200;37510;37510;/catalog/vodopropusknye-truby-zk/zk-9-200/;совпало
-drenazhnyy-kolodec-iz-kolec;711;проза;?;17500;;;не с чем сверить
-drenazhnyy-kolodec-iz-kolec;711;таблица;Итого;17558;;;не с чем сверить
+drenazhnyy-kolodec-iz-kolec;711;проза;?;18200;;;не с чем сверить
+drenazhnyy-kolodec-iz-kolec;711;таблица;Итого;18232;;;не с чем сверить
 drenazhnyy-kolodec-iz-kolec;711;таблица;Люк ЛЧ-Л;6578;;;не с чем сверить
 fundament-f1-pod-dorozhnye-znaki;693;проза;?;4837;;;не с чем сверить
 kak-podobrat-lotok-nkl;696;проза;ЛД-2;9876;;;не с чем сверить
