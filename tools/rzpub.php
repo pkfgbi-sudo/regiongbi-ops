@@ -30,6 +30,10 @@
  * roditel_slug читается ещё и у самой позиции. Порядок старшинства:
  *   parent позиции (url) > roditel_slug позиции > roditel_slug пакета.
  * Пакеты с одним родителем на всех работают как раньше.
+ *
+ * Задание 026: `_rz_package` больше не затирается — имя нового пакета
+ * дописывается в конец через запятую, если его там ещё нет. Имя последнего
+ * пакета пишется отдельно в `_rz_package_last`.
  */
 
 if (!defined('WP_CLI') || !WP_CLI) {
@@ -246,8 +250,21 @@ foreach ($items as $it) {
     // мусор промежуточной ревизии того же дня
     delete_post_meta($id, '_rz_product_src');
 
-    // отметка, каким пакетом страница заведена — для последующих ревизий
-    update_post_meta($id, '_rz_package', $name);
+    // Отметка, какими пакетами страница собрана — для последующих ревизий.
+    // Задание 026: поле накопительное. Раньше здесь стояло имя последнего
+    // пакета и история терялась: по #101 уже не было видно, что содержимое
+    // собрано пакетом ceny-02. Порядок хронологический, дублей нет; имя
+    // последнего пакета отдельной строкой в _rz_package_last — его читает
+    // код и отчёты, которым нужен «последний».
+    $bylo = get_post_meta($id, '_rz_package', true);
+    $spisok = array();
+    foreach (explode(',', (string) $bylo) as $p) {
+        $p = trim($p);
+        if ($p !== '' && !in_array($p, $spisok, true)) { $spisok[] = $p; }
+    }
+    if (!in_array($name, $spisok, true)) { $spisok[] = $name; }
+    update_post_meta($id, '_rz_package', implode(', ', $spisok));
+    update_post_meta($id, '_rz_package_last', $name);
 }
 
 WP_CLI::log(str_repeat('-', 72));

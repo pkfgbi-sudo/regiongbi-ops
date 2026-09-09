@@ -91,9 +91,23 @@ function rz_weight_from_specs($specs) {
     return null;
 }
 
-/* Таблица «Параметр | Значение» — характеристики одного изделия. */
+/* Строка «Цена» в характеристики не идёт: цена уже стоит в offers, и второй
+ * раз в additionalProperty она не нужна. Задание 026. */
+function rz_spec_skip_key($k) {
+    return mb_stripos($k, 'цена') === 0;
+}
+
+/* Таблица характеристик одного изделия.
+ *
+ * Правило первое (прежнее): таблица со словом «Параметр» — она главнее.
+ * Правило второе (задание 026): такой таблицы нет — берём первую таблицу
+ * страницы без <thead>, где строк не меньше двух и в каждой строке ровно две
+ * ячейки <td>. Это описание таблицы характеристик карточек 019–025, где слова
+ * «Параметр» нет вовсе; таблицы рядов марок под него не попадают — у них есть
+ * <thead> и четыре-шесть столбцов. */
 function rz_single_specs($content) {
     if (!preg_match_all('/<table>(.*?)<\/table>/su', $content, $tables)) return array();
+
     foreach ($tables[1] as $t) {
         if (mb_strpos($t, 'Параметр') === false) continue;
         $specs = array();
@@ -103,12 +117,30 @@ function rz_single_specs($content) {
                 if (count($cells[1]) < 2) continue;
                 $k = trim(wp_strip_all_tags($cells[1][0]));
                 $v = trim(wp_strip_all_tags($cells[1][1]));
-                if ($k === '' || $v === '') continue;
+                if ($k === '' || $v === '' || rz_spec_skip_key($k)) continue;
                 $specs[$k] = $v;
             }
         }
         if ($specs) return $specs;
     }
+
+    foreach ($tables[1] as $t) {
+        if (preg_match('/<thead>/su', $t)) continue;
+        if (!preg_match_all('/<tr>(.*?)<\/tr>/su', $t, $rows)) continue;
+        if (count($rows[1]) < 2) continue;
+        $specs = array();
+        $dve_kletki = true;
+        foreach ($rows[1] as $row) {
+            preg_match_all('/<td>(.*?)<\/td>/su', $row, $cells);
+            if (count($cells[1]) !== 2) { $dve_kletki = false; break; }
+            $k = trim(wp_strip_all_tags($cells[1][0]));
+            $v = trim(wp_strip_all_tags($cells[1][1]));
+            if ($k === '' || $v === '' || rz_spec_skip_key($k)) continue;
+            $specs[$k] = $v;
+        }
+        if ($dve_kletki && $specs) return $specs;
+    }
+
     return array();
 }
 
