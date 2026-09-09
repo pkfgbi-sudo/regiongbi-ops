@@ -336,43 +336,19 @@ main.site-main > h1.page-title{max-width:1290px;margin:36px auto 24px;padding:0 
 
 /* ------------------------------------------- блоки, покрашенные в содержимом
  *
- * Часть страниц собрана с цветами прошлой палитры прямо в разметке. Проверено
- * последовательным обходом всех 88 адресов из карты сайта 03.09.2026:
- *   — зелёные блоки-плашки (background-color:#23483a) — только на главной, 2 шт.;
- *   — зелёный заголовок «Смотрите также» (color:#23483a) — 20 страниц;
- *   — скруглённые карточки этого блока (border-radius:8px) — 21 страница;
- *   — зелёная кнопка в тексте (background-color:#2f6b52) — на главной.
+ * Тут было девять правил-заплаток на !important: часть страниц была собрана с
+ * цветами прошлой палитры прямо в разметке. Заданием 031 эти цвета переписаны
+ * в содержимом пакетом cveta-01, и семь правил стали ловить пустоту — сняты.
+ * Замер: обход всех 249 адресов по одному, tools/w031/obhod.php, 09.09.2026,
+ * неудавшихся замеров 0. Под шесть снятых селекторов (#23483a в фоне и в
+ * тексте, #2f6b52, #1B1E22, #6c726b, border-radius:16px) — 0 элементов.
  *
- * Считать такое надо обходом по одному адресу за раз. Параллельные 88 запросов
- * к шейред-хостингу дают короткие ответы, и совпадение просто не находится —
- * на этом я 03.09.2026 уже один раз получил ложную картину.
- *
- * Инлайновый стиль перебивается только !important, поэтому перекрашиваем
- * выводом. Это временная мера: правильное решение — переписать эти блоки
- * пакетом публикации, тогда правила ниже можно будет убрать.
- *
- * Селекторы намеренно длинные: [style*="background-color:#23483a"] попадает
- * только в фон, а [style*="color:#23483a"] — ещё и в цвет текста. Короткая
- * запись перекрасила бы заголовок «Смотрите также» в фон.
+ * Оба оставшихся правила ловят не содержимое:
+ *   — скруглённые карточки «Смотрите также» печатает mu-rz-related.php
+ *     инлайновым стилем, 426 штук на 181 адресе, пакетом их не переписать;
+ *   — border-radius у кнопок — про все кнопки сразу, а не про заплатку.
  */
 .entry-content .wp-block-button__link{border-radius:0!important}
-.entry-content .wp-block-button__link[style*="background-color:#2f6b52"]{
-  background-color:var(--rz-ink)!important;color:#fff!important
-}
-.entry-content .wp-block-button__link[style*="background-color:#2f6b52"]:hover{
-  background-color:var(--rz-accent)!important;color:var(--rz-accent-fg)!important
-}
-.entry-content [style*="background-color:#23483a"]{
-  background-color:var(--rz-ink)!important;border-radius:0!important;
-  border-top:3px solid var(--rz-accent)
-}
-.entry-content [style*="border-radius:16px"]{border-radius:0!important}
-.entry-content [style*="color:#6c726b"]{color:#9AA09C!important}
-.wp-block-cover__background[style*="background-color:#1B1E22"]{background-color:var(--rz-ink)!important}
-.entry-content h2[style*="color:#23483a"]{
-  color:var(--rz-ink)!important;font-family:var(--rz-display)!important;
-  font-size:clamp(23px,2.4vw,31px)!important
-}
 .entry-content a[style*="border-radius:8px"]{
   border-radius:0!important;border-color:var(--rz-line)!important
 }

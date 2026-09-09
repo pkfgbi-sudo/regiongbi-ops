@@ -16,10 +16,20 @@ if (!defined('REGIONZHBI_METRIKA_ID')) define('REGIONZHBI_METRIKA_ID', 112302967
 if (!defined('REGIONZHBI_PHONE')) define('REGIONZHBI_PHONE', '+7 996 097-09-80');
 if (!defined('REGIONZHBI_EMAIL')) define('REGIONZHBI_EMAIL', 'zakaz@regiongbi.ru');
 
-/* 1. Бренд-стили контента (зелёный/графит) */
+/* 1. Бренд-стили контента (зелёный/графит)
+ *
+ * Задание 031: --rz-line и --rz-tint здесь переименованы в --rzs-line и
+ * --rzs-tint. Ровно эти два имени объявлял и mu-rz-theme.php, а он печатается
+ * позже (mu-плагины подключаются по алфавиту) и молча перекрывал их своими
+ * значениями. Два набора переменных с общими именами — мина: стоит порядку
+ * подключения измениться, и палитра поедет, а причину искать негде.
+ * Остальные имена (--rz-pine, --rz-pine-br, --rz-graphite) уникальны, они
+ * не тронуты. Значения при переименовании не менялись; на вид это ничего не
+ * меняет, потому что все четыре правила, где эти токены используются, тема
+ * перекрывает своими — теми же селекторами и позже по документу. */
 add_action('wp_head', function () { ?>
 <style id="regionzhbi-brand">
-:root{--rz-graphite:#23272E;--rz-pine:#23483A;--rz-pine-br:#2F6B52;--rz-line:#DBDDD6;--rz-tint:#F6F7F3}
+:root{--rz-graphite:#23272E;--rz-pine:#23483A;--rz-pine-br:#2F6B52;--rzs-line:#DBDDD6;--rzs-tint:#F6F7F3}
 .entry-content h2,.wp-block-post-content h2{font-weight:800;letter-spacing:-.01em;margin:2rem 0 .8rem}
 .entry-content a{color:var(--rz-pine-br)}.entry-content a:hover{color:var(--rz-pine)}
 .entry-content ul{list-style:none;padding-left:0}
@@ -27,11 +37,11 @@ add_action('wp_head', function () { ?>
 .entry-content ul li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--rz-pine-br)}
 .entry-content table,.wp-block-table table{width:100%;border-collapse:collapse;font-size:.94rem}
 .entry-content table thead th,.wp-block-table thead th{background:var(--rz-graphite);color:#fff;text-align:left;padding:12px 14px;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600}
-.entry-content table td,.wp-block-table td{padding:11px 14px;border-top:1px solid var(--rz-line);font-variant-numeric:tabular-nums}
-.entry-content table tbody tr:nth-child(even){background:var(--rz-tint)}
+.entry-content table td,.wp-block-table td{padding:11px 14px;border-top:1px solid var(--rzs-line);font-variant-numeric:tabular-nums}
+.entry-content table tbody tr:nth-child(even){background:var(--rzs-tint)}
 .entry-content table td:first-child{font-weight:600}
-.wp-block-table{overflow-x:auto;border:1px solid var(--rz-line);border-radius:10px}
-.entry-content details{background:#fff;border:1px solid var(--rz-line);border-radius:8px;padding:2px 16px;margin:.6rem 0}
+.wp-block-table{overflow-x:auto;border:1px solid var(--rzs-line);border-radius:10px}
+.entry-content details{background:#fff;border:1px solid var(--rzs-line);border-radius:8px;padding:2px 16px;margin:.6rem 0}
 .entry-content summary{cursor:pointer;font-weight:600;padding:13px 28px 13px 0;position:relative;list-style:none}
 .entry-content summary::-webkit-details-marker{display:none}
 .entry-content summary::after{content:"+";position:absolute;right:2px;top:9px;color:var(--rz-pine-br);font-size:1.35rem;font-weight:700}
