@@ -95,7 +95,15 @@ function rz_related_marka($podpis) {
     return implode(' ', array_slice($slova, 0, 2));
 }
 
-/** Одна карточка. Пустая строка — если целевой страницы нет или она не опубликована. */
+/** Одна карточка. Пустая строка — если целевой страницы нет или она не опубликована.
+ *
+ * Скруглений здесь больше нет (задание 032). Раньше карточка печаталась с
+ * border-radius:8px, а картинка внутри — с 6px 6px 0 0; палитра «графит и
+ * янтарь» скругления не использует, и тема гасила их правилом-заплаткой
+ * .entry-content a[style*="border-radius:8px"] на !important. Заплатка снята,
+ * скругления убраны в источнике. Заодно рамка переведена с #e3e7e5 на
+ * var(--rz-line): именно этот цвет заплатка и подставляла, так карточка
+ * выглядит ровно как до правки. */
 function rz_related_kartochka($put, $podpis) {
     $page = get_page_by_path($put, OBJECT, 'page');
     if (!$page || $page->post_status !== 'publish') return '';
@@ -107,12 +115,12 @@ function rz_related_kartochka($put, $podpis) {
         $verh = '<img src="' . esc_url($img) . '" alt="' . esc_attr($podpis) . '"'
               . ' loading="lazy" decoding="async"'
               . ' style="width:100%;height:120px;object-fit:cover;'
-              . 'border-radius:6px 6px 0 0;display:block" />';
+              . 'display:block" />';
     } else {
         /* Не серый прямоугольник, а плитка с маркой: бумажный тон темы,
            тонкая рамка, шрифт заголовков темы (--rz-display). */
         $verh = '<div style="height:120px;box-sizing:border-box;background:#F2F1EC;'
-              . 'border:1px solid #DCD9D0;border-radius:6px 6px 0 0;'
+              . 'border:1px solid #DCD9D0;'
               . 'display:flex;align-items:center;justify-content:center;'
               . 'font-family:var(--rz-display),\'Arial Narrow\',Arial,sans-serif;'
               . 'font-weight:600;font-size:30px;line-height:1;letter-spacing:.02em;'
@@ -120,8 +128,8 @@ function rz_related_kartochka($put, $podpis) {
               . esc_html(rz_related_marka($podpis)) . '</div>';
     }
 
-    return '<a href="' . esc_url($url) . '" style="display:block;border:1px solid #e3e7e5;'
-         . 'border-radius:8px;overflow:hidden;text-decoration:none;color:#23272e;background:#fff">'
+    return '<a href="' . esc_url($url) . '" style="display:block;border:1px solid var(--rz-line);'
+         . 'overflow:hidden;text-decoration:none;color:#23272e;background:#fff">'
          . $verh
          . '<span style="display:block;padding:10px 12px;font-size:14px;line-height:1.35;'
          . 'font-weight:600">' . esc_html($podpis) . '</span></a>';

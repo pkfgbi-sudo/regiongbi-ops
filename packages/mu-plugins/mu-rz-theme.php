@@ -107,6 +107,11 @@ add_action('wp_head', function () {
   --rz-line:#DEDEDA;       /* рамки */
   --rz-line-2:#E9E9E5;     /* внутренние линии таблиц */
 
+  /* База теней: те же числа, что --rz-ink #2A2F33, но списком — rgba() берёт
+     из переменной три числа, а не цвет. Тени собираются только через него,
+     чтобы смена палитры не оставляла теней от прошлой. Задание 032. */
+  --rz-ten-rgb:42,47,51;
+
   /* Янтарь разведён на четыре токена по ролям, и это не украшательство.
      Белый текст на #C8791A даёт контраст 3,38 при норме 4,5 — то есть на
      янтарной заливке писать белым нельзя вообще нигде. Поэтому:
@@ -334,24 +339,11 @@ main.site-main > h1.page-title{max-width:1290px;margin:36px auto 24px;padding:0 
 .ct-breadcrumbs a{color:var(--rz-muted)}
 .ct-breadcrumbs a:hover{color:var(--rz-accent-t)}
 
-/* ------------------------------------------- блоки, покрашенные в содержимом
- *
- * Тут было девять правил-заплаток на !important: часть страниц была собрана с
- * цветами прошлой палитры прямо в разметке. Заданием 031 эти цвета переписаны
- * в содержимом пакетом cveta-01, и семь правил стали ловить пустоту — сняты.
- * Замер: обход всех 249 адресов по одному, tools/w031/obhod.php, 09.09.2026,
- * неудавшихся замеров 0. Под шесть снятых селекторов (#23483a в фоне и в
- * тексте, #2f6b52, #1B1E22, #6c726b, border-radius:16px) — 0 элементов.
- *
- * Оба оставшихся правила ловят не содержимое:
- *   — скруглённые карточки «Смотрите также» печатает mu-rz-related.php
- *     инлайновым стилем, 426 штук на 181 адресе, пакетом их не переписать;
- *   — border-radius у кнопок — про все кнопки сразу, а не про заплатку.
- */
+/* Девять правил-заплаток на !important, гасивших прошлую палитру в разметке
+ * страниц, сняты заданиями 031 и 032: цвета переписаны в содержимом,
+ * скругления убраны в самих плагинах, которые их печатали. Осталось одно
+ * правило, и оно не заплатка, а часть палитры: скруглений в ней нет вовсе. */
 .entry-content .wp-block-button__link{border-radius:0!important}
-.entry-content a[style*="border-radius:8px"]{
-  border-radius:0!important;border-color:var(--rz-line)!important
-}
 
 /* Нижняя строка футера Blocksy — «Оформление разработал CreativeThemes».
    Под ней идёт наш собственный подвал с реквизитами, получается два подвала
@@ -381,7 +373,7 @@ body>a[href^="tel:"]{
   font-family:var(--rz-body)!important;font-weight:600!important;
   font-size:14.5px!important;padding:13px 20px!important;
   letter-spacing:.01em!important;
-  box-shadow:0 6px 20px rgba(22,25,26,.18)!important
+  box-shadow:0 6px 20px rgba(var(--rz-ten-rgb),.18)!important
 }
 body>a[href^="tel:"]:hover{background:var(--rz-accent)!important;color:var(--rz-accent-fg)!important}
 
@@ -411,7 +403,7 @@ body>a[href^="tel:"]:hover{background:var(--rz-accent)!important;color:var(--rz-
     border-radius:0!important;text-align:center!important;
     padding:16px 12px!important;font-size:15px!important;
     border-top:2px solid var(--rz-accent)!important;
-    box-shadow:0 -2px 14px rgba(22,25,26,.16)!important
+    box-shadow:0 -2px 14px rgba(var(--rz-ten-rgb),.16)!important
   }
 }
 CSS;

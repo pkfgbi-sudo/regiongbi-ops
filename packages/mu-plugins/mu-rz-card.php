@@ -115,7 +115,7 @@ function rz_card_html($d, $post_id) {
         $foto = '<div style="flex:0 0 260px;max-width:100%">'
               . '<img src="' . esc_url($d['image']) . '" alt="' . esc_attr($d['name']) . '"'
               . ' decoding="async"'
-              . ' style="width:100%;height:auto;border-radius:8px;display:block;'
+              . ' style="width:100%;height:auto;display:block;'
               . 'background:' . RZ_CARD_SURFACE . '">'
               . '</div>';
     }
@@ -151,11 +151,11 @@ function rz_card_html($d, $post_id) {
         '<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px">'
       . '<a href="/kontakty/#zayavka" data-rz-cel="zayavka" class="rz-card-cta"'
       . ' style="flex:1 1 auto;text-align:center;padding:12px 22px;background:' . RZ_CARD_ACCENT . ';'
-      . 'color:' . RZ_CARD_ACCENT_FG . ';border:1px solid ' . RZ_CARD_ACCENT . ';border-radius:8px;'
+      . 'color:' . RZ_CARD_ACCENT_FG . ';border:1px solid ' . RZ_CARD_ACCENT . ';'
       . 'text-decoration:none;font-weight:600;font-size:15px">Запросить счёт</a>'
       . '<a href="tel:+79960970980" data-rz-cel="tel"'
       . ' style="flex:1 1 auto;text-align:center;padding:12px 22px;background:' . RZ_CARD_SURFACE . ';'
-      . 'color:' . RZ_CARD_INK . ';border:1px solid ' . RZ_CARD_LINE . ';border-radius:8px;'
+      . 'color:' . RZ_CARD_INK . ';border:1px solid ' . RZ_CARD_LINE . ';'
       . 'text-decoration:none;font-weight:600;font-size:15px">+7 996 097-09-80</a>'
       . '</div>';
 

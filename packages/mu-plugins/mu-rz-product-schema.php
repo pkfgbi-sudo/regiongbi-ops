@@ -42,6 +42,13 @@ function rz_product_seller() {
     );
 }
 
+/* Значения сравниваем без разницы в пробелах: «ГОСТ 8020-2016» и то же самое
+   через двойной или неразрывный пробел — одно и то же значение. */
+function rz_product_norm($s) {
+    $s = str_replace("\xC2\xA0", ' ', (string) $s);
+    return trim(preg_replace('/\s+/u', ' ', $s));
+}
+
 /* Характеристики → PropertyValue. */
 function rz_product_props($specs) {
     $out = array();
@@ -76,8 +83,24 @@ function rz_build_product($d, $url, $category) {
 
     $props = rz_product_props(isset($d['specs']) ? $d['specs'] : array());
     if (!empty($d['gost'])) {
+        /* ГОСТ из поля gost не добавляем, если ровно то же значение уже пришло
+           строкой таблицы («Стандарт | ГОСТ 8020-2016»): иначе PropertyValue
+           «Стандарт» выводится дважды. Задание 032.
+
+           Сравнение по ЗНАЧЕНИЮ, а не по имени ключа. Если в таблице стоит один
+           документ, а в gost попал другой (так у #820 ПК-15: в таблице
+           «Альбом РК 2201-82», в gost «ГОСТ 8020-2016»), это расхождение
+           данных, а не дубль — оба значения остаются в разметке, чтобы
+           расхождение было видно, а не заглажено кодом. */
+        $uzhe = array();
+        foreach ($props as $pr) {
+            if (mb_stripos(rz_product_norm($pr['name']), 'стандарт') === false) continue;
+            $uzhe[rz_product_norm($pr['value'])] = true;
+        }
         foreach ($d['gost'] as $g) {
-            $props[] = array('@type' => 'PropertyValue', 'name' => 'Стандарт', 'value' => 'ГОСТ ' . $g);
+            $znach = 'ГОСТ ' . $g;
+            if (isset($uzhe[rz_product_norm($znach)])) continue;
+            $props[] = array('@type' => 'PropertyValue', 'name' => 'Стандарт', 'value' => $znach);
         }
     }
     if ($props) $p['additionalProperty'] = $props;
