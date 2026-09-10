@@ -1,0 +1,97 @@
+{
+ "package": "fbs-svod-02",
+ "opisanie": "Задание 033: три записи блога — ссылки на 17 схлопнутых карточек переведены на раздел с якорем",
+ "items": [
+  {
+   "slug": "markirovka-fbs",
+   "replace": [
+    [
+     "href=\"/catalog/fbs-bloki/fbs-12-3-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-12-3-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-12-4-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-12-4-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-12-5-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-12-5-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-12-6-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-12-6-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-24-3-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-24-3-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-24-5-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-24-5-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-24-6-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-24-6-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-9-3-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-9-3-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-9-4-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-9-4-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-9-5-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-9-5-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-9-6-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-9-6-6\""
+    ]
+   ]
+  },
+  {
+   "slug": "fbs-kak-poschitat-kolichestvo",
+   "replace": [
+    [
+     "href=\"/catalog/fbs-bloki/fbs-12-4-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-12-4-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-24-3-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-24-3-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-24-5-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-24-5-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-6-4-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-6-4-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-9-4-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-9-4-6\""
+    ]
+   ]
+  },
+  {
+   "slug": "fbs-ili-monolitnyy-fundament",
+   "replace": [
+    [
+     "href=\"/catalog/fbs-bloki/fbs-12-4-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-12-4-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-24-5-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-24-5-6\""
+    ],
+    [
+     "href=\"/catalog/fbs-bloki/fbs-9-4-6/\"",
+     "href=\"/catalog/fbs-bloki/#fbs-9-4-6\""
+    ]
+   ]
+  }
+ ]
+}
